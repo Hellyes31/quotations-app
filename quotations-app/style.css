@@ -1,0 +1,108 @@
+@font-face {
+    font-family: Typewritter;
+    src: url("Fonts/carbontype.ttf");
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    font-family: Typewritter;
+    cursor: url("Img/parchemin.png") 0 0, auto;
+    background-image: url("Img/Background.jpg");
+    background-size: cover;
+    background-color: #fdf6e3;
+    color: #523737;
+}
+hr {
+    border: none;            
+    height: 2px;             
+    background-color: rgb(158, 54, 54);   
+    margin: 20px 0; 
+}
+h1,h2,h3 {
+    color: #442313;
+    text-align: center;
+}
+h1{
+    text-align: center;
+    font-size: 50px;
+}
+
+
+input, textarea {
+    cursor: url("Img/feather.png") 0 0, text;
+}
+
+button, input[type="submit"] {
+    cursor: url("Img/book.png") 4 4, pointer;
+}
+
+#button {
+    font-family: Typewritter;
+}
+
+/* bloc de formulaire et citations */
+form, .quote { 
+    background: rgba(255, 255, 240, 0.85); 
+    border: 2px solid #8b5e3c;
+    border-radius: 12px;
+    padding: 20px; /* espace à l’intérieur du bloc. */
+    margin: 20px auto; /* espace autour + auto centre horizontalement */
+    width: 80%;
+    box-shadow: 4px 4px 10px rgba(0,0,0,0.3);
+}
+
+.quote {
+    position: relative; /* permet aux quotes d'être positionné en fonctionn du bloc */
+    font-style: italic;
+    font-size: 1.2em;
+}
+
+.quote::before, .quote::after {
+    content: '"';
+    font-size: 2em;
+    color: #c94c4c;
+    position: absolute;
+}
+
+.quote::before {
+    top: 10px;
+    left: 10px;
+}
+
+.quote::after {
+    bottom: 10px;
+    right: 10px;
+}
+
+input {
+    font-family: Typewritter ;
+    border: 2px solid rgb(158, 54, 54);
+    border-radius: 12px;
+    text-align: center;
+    background-color: #fffaf0;
+}
+
+input:active{
+    font-family: Typewritter ;
+    border: 2px solid rgb(158, 54, 54);
+    border-radius: 12px;
+    text-align: center;
+    background-color: #fffaf0;
+}
+
+#button {
+    background-color: #c94c4c;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#button:hover {
+    background-color: #a83c3c;
+}

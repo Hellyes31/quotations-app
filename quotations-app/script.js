@@ -15,19 +15,23 @@ function addQuote(quote, author){
     let paragraphAuthor = document.createElement("p");
     let divQuote = document.createElement("div");
     let quoteCountHtml = document.getElementById("count") 
-
+    const backRow = document.createElement("br")
+    const drawLine = document.createElement("hr")
     paragraphText.setAttribute("class", "text");
     paragraphAuthor.setAttribute("class", "author");
     divQuote.setAttribute("class", "quote");
 
     paragraphText.innerHTML = quote;
     paragraphAuthor.innerHTML = author;
-
+  
+    divQuote.appendChild(drawLine);
     divQuote.appendChild(paragraphText);  
+    divQuote.appendChild(backRow)
     divQuote.appendChild(paragraphAuthor);
+    divQuote.appendChild(drawLine);  
     quoteList.appendChild(divQuote);
     quoteCount +=1;
-    quoteCountHtml.innerHTML = quoteCount + " citations"
+    quoteCountHtml.innerHTML = quoteCount + " citations" 
 }
 
 
